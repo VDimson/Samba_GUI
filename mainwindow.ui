@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>973</width>
+    <height>633</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Управление пользователями Samba</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/ikonka/image/opensuse-logo.png</normaloff>:/ikonka/image/opensuse-logo.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1" colspan="2">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Закрыть</string>
+      </property>
+      <property name="icon">
+       <iconset resource="res.qrc">
+        <normaloff>:/ikonka/image/down.png</normaloff>:/ikonka/image/down.png</iconset>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>false</bool>
+      </property>
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>false</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Пользователи</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="twg">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <column>
+           <property name="text">
+            <string/>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QTextEdit" name="textEdit"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="icon">
+        <iconset resource="res.qrc">
+         <normaloff>:/ikonka/image/flag green.png</normaloff>:/ikonka/image/flag green.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Активные пользователи</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="twg_resurs">
+          <property name="autoScroll">
+           <bool>true</bool>
+          </property>
+          <property name="showDropIndicator" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="headerHidden">
+           <bool>true</bool>
+          </property>
+          <attribute name="headerVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="headerCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="headerHighlightSections">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="headerShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="headerStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Пользователь</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ИмяПК</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>ip адрес</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Сервис папка</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Время подключения</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Ресурсы</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="1" column="0">
+         <widget class="QTreeWidget" name="twg_resurs_2">
+          <property name="autoScroll">
+           <bool>true</bool>
+          </property>
+          <property name="showDropIndicator" stdset="0">
+           <bool>true</bool>
+          </property>
+          <property name="headerHidden">
+           <bool>true</bool>
+          </property>
+          <attribute name="headerVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="headerCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="headerHighlightSections">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="headerShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="headerStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Пользователь</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>UID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Время подключения</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>DenyMode</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Oplock</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Сервис папка</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Группировка</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QRadioButton" name="radioButton_net">
+             <property name="text">
+              <string>нет</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButton_user">
+             <property name="text">
+              <string>пользователь</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonre_resurs">
+             <property name="text">
+              <string>ресурс</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>973</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Действия</string>
+    </property>
+    <addaction name="actionSamba"/>
+    <addaction name="action"/>
+    <addaction name="action_6"/>
+    <addaction name="action_2"/>
+    <addaction name="action_dell_pid"/>
+    <addaction name="action_3"/>
+    <addaction name="separator"/>
+    <addaction name="action_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_vers"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_3"/>
+   <addaction name="actionSamba"/>
+   <addaction name="action"/>
+   <addaction name="action_2"/>
+   <addaction name="action_6"/>
+   <addaction name="action_dell_pid"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSamba">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ikonka/image/add user.png</normaloff>:/ikonka/image/add user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ins</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ikonka/image/remove user.png</normaloff>:/ikonka/image/remove user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ikonka/image/user.png</normaloff>:/ikonka/image/user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактировать</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ikonka/image/update.png</normaloff>:/ikonka/image/update.png</iconset>
+   </property>
+   <property name="text">
+    <string>Обновить</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>выход</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ikonka/image/key.png</normaloff>:/ikonka/image/key.png</iconset>
+   </property>
+   <property name="text">
+    <string>Задать пароль</string>
+   </property>
+  </action>
+  <action name="action_vers">
+   <property name="text">
+    <string>версия</string>
+   </property>
+  </action>
+  <action name="action_dell_pid">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ikonka/image/delete 1.png</normaloff>:/ikonka/image/delete 1.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить процесс</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

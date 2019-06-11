@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/ikonka">
+        <file>image/add user.png</file>
+        <file>image/remove user.png</file>
+        <file>image/update.png</file>
+        <file>image/user.png</file>
+        <file>image/key.png</file>
+        <file>image/system_config_display.png</file>
+        <file>image/down.png</file>
+        <file>image/delete 1.png</file>
+        <file>image/flag green.png</file>
+        <file>image/opensuse-logo.png</file>
+    </qresource>
+</RCC>
