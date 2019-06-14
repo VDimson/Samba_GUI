@@ -437,9 +437,16 @@ ui->twg_resurs->clear();
     {
     InsertUserResurs();
     }
-    if (m_process3->waitForReadyRead() && m_process->waitForReadyRead())
+    if (m_process3->waitForFinished() && m_process->waitForFinished())
+
     {
+       // ui->statusBar->showMessage("сработал!");  //отладочная инфа !!!
     InsertUser();
+    }
+    else
+    {
+        ui->statusBar->showMessage("ошибка запроса! cat /etc/passwd :" + QString::number(m_process3->exitCode())+" pdbedit-L :"+QString::number(m_process->exitCode()));
+
     }
     }
     //из процесса получаем список пользоватлей САМБА!
